@@ -48,7 +48,7 @@ public class MobileWebTest extends BaseTestMobile {
     @Description("Проверка на наличие только дебетовых карт в списке при переходе на вкладку 'дебетовые")
     @DisplayName("Проверка на отображение ожидаемых элементов")
     @Severity(SeverityLevel.TRIVIAL)
-    public void check1ErrorForm() {
+    public void checkListCardHeaders() {
         open("https://www.mtsbank.ru/"); // Замените на ваш URL
         MobileMainPage mobileMainPage = new MobileMainPage();
         mobileMainPage.clickMobileButtonDebetCard();

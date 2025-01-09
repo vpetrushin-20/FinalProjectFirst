@@ -19,7 +19,7 @@ abstract class BaseTestDesktop {
         Configuration.browserSize = "1920x1080";
         Configuration.headless = true;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        System.setProperty("chromeoptions.args", "\"--no-sandbox\",\"--disable-dev-shm-usage\",\"--remote-debugging-port=9222\"");
+        System.setProperty("chromeoptions.args", "\"--no-sandbox\",\"--disable-dev-shm-usage\",\"--remote-debugging-port=9222\",\"--headless\"");
     }
 
     @Before
