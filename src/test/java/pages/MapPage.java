@@ -15,11 +15,14 @@ public class MapPage {
     private final SelenideElement pandusFilter = $x("//div[@class='styled__Container-sc-8qcbi-0 oSLlP']//div[21]//div/div");
     private final SelenideElement buttonList = $x("//div[@data-testid='tabsbar']//button[2]");
     private final ElementsCollection checkList = $$x("//div[@data-testid='tabpanel']");
+    private final SelenideElement buttonWork = $x("//div[@class='styled__Container-sc-8qcbi-0 oSLlP']//div[10]//label/div[1]");
+
 
     @Step("Выбор фильтра 'Есть пандус'")
     public MapPage enterPandusFilter() {
         buttonFilters.click();
         pandusFilter.scrollTo().click();
+        buttonWork.click();
         buttonFilters.click();
         buttonList.click();
         return this;
