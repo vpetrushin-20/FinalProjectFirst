@@ -7,28 +7,41 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 
 
 abstract class BaseTestDesktop {
 
 
-    public void setUp() {
+//    public void setUp() {
+//        WebDriverManager.chromedriver().setup();
+//        Configuration.browser = "chrome";
+//        Configuration.webdriverLogsEnabled = true;
+//        Configuration.browserSize = "1920x1080";
+//        Configuration.headless = true;
+//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+//        System.setProperty("chromeoptions.args", "\"--no-sandbox\",\"--disable-dev-shm-usage\",\"--remote-debugging-port=9222\",\"--headless\"");
+//    }
+//
+//    @Before
+//    public void init() {
+//        setUp();
+//    }
+
+    @BeforeAll
+    public static void setUp() {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
         Configuration.webdriverLogsEnabled = true;
-        Configuration.browserSize = "1920x1080";
         Configuration.headless = true;
+        Configuration.browserSize = "1920x1080";
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         System.setProperty("chromeoptions.args", "\"--no-sandbox\",\"--disable-dev-shm-usage\",\"--remote-debugging-port=9222\",\"--headless\"");
     }
 
-    @Before
-    public void init() {
-        setUp();
-    }
-
     @After
-    public void tearDown() {
+    public  void tearDown() {
         Selenide.closeWebDriver();
     }
 }

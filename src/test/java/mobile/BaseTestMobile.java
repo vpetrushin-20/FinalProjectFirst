@@ -5,14 +5,15 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.After;
+import org.junit.Before;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 
 public abstract class BaseTestMobile {
 
-    @BeforeAll
-    public static void setUp() {
+    @Before
+    public  void setUp() {
 
         Configuration.browser = "chrome";
         Configuration.browserSize = "375x812";

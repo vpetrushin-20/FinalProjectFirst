@@ -1,5 +1,6 @@
 package desktop;
 
+import com.codeborne.selenide.Selenide;
 import io.qameta.allure.*;
 
 import org.junit.jupiter.api.DisplayName;
@@ -70,6 +71,9 @@ public class WebSiteTest extends BaseTestDesktop {
         Assertions.assertEquals(valueThreeBefore, valueThreeAfter);
         Assertions.assertEquals(valueFourBefore, valueFourAfter);
 
+        Selenide.closeWebDriver();
+        Selenide.clearBrowserCookies();
+
     }
 
     @Test
@@ -95,6 +99,9 @@ public class WebSiteTest extends BaseTestDesktop {
                 .enterEmail(EMAIL_ERROR)
                 .clickBirthInput()
                 .checkingFields();
+
+        Selenide.closeWebDriver();
+        Selenide.clearBrowserCookies();
     }
 
     @Test
@@ -114,6 +121,9 @@ public class WebSiteTest extends BaseTestDesktop {
                 .clickBirthInput()
                 .setDate()
                 .checkingFieldsNoErrors();
+
+        Selenide.closeWebDriver();
+        Selenide.clearBrowserCookies();
     }
 
     @Test
@@ -127,6 +137,9 @@ public class WebSiteTest extends BaseTestDesktop {
         MapPage mapPage = new MapPage();
         mapPage.enterPandusFilter()
                 .checkValueFilterInList();
+
+        Selenide.closeWebDriver();
+        Selenide.clearBrowserCookies();
     }
 
     @Test
@@ -149,5 +162,8 @@ public class WebSiteTest extends BaseTestDesktop {
                 .completeFile()
                 .clickEnterForm()
                 .checkErrorText();
+
+        Selenide.closeWebDriver();
+        Selenide.clearBrowserCookies();
     }
 }

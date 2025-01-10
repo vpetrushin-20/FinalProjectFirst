@@ -1,5 +1,6 @@
 package mobile;
 
+import com.codeborne.selenide.Selenide;
 import io.qameta.allure.*;
 import mobilePages.MobileDebetCardMtsMoneyPage;
 import mobilePages.MobileMainPage;
@@ -42,6 +43,9 @@ public class MobileWebTest extends BaseTestMobile {
                 .enterErrorFormEmail(EMAIL_ERROR)
                 .enterErrorFormFio(FIO_ERROR)
                 .mobileCheckingFields();
+
+        Selenide.closeWebDriver();
+        Selenide.clearBrowserCookies();
     }
 
     @Test
@@ -55,5 +59,8 @@ public class MobileWebTest extends BaseTestMobile {
 
         MobileDebetCardMtsMoneyPage mobileDebetCardMtsMoneyPage = new MobileDebetCardMtsMoneyPage();
         mobileDebetCardMtsMoneyPage.mobileCheckDebetHeaders();
+
+        Selenide.closeWebDriver();
+        Selenide.clearBrowserCookies();
     }
 }
