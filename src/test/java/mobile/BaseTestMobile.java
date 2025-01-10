@@ -12,8 +12,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public abstract class BaseTestMobile {
 
-    @Before
-    public  void setUp() {
+    @BeforeAll
+    public static void setUp() {
 
         Configuration.browser = "chrome";
         Configuration.browserSize = "375x812";
