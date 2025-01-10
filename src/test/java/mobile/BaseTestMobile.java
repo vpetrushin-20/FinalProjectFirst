@@ -6,6 +6,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -27,8 +28,8 @@ public abstract class BaseTestMobile {
 
     }
 
-    @After
-    public void tearDown() {
+    @AfterAll
+    public static void tearDown() {
         Selenide.closeWebDriver();
     }
 
