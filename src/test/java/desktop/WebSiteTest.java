@@ -71,8 +71,6 @@ public class WebSiteTest extends BaseTestDesktop {
         Assertions.assertEquals(valueThreeBefore, valueThreeAfter);
         Assertions.assertEquals(valueFourBefore, valueFourAfter);
 
-        Selenide.closeWebDriver();
-        Selenide.clearBrowserCookies();
 
     }
 
@@ -100,8 +98,7 @@ public class WebSiteTest extends BaseTestDesktop {
                 .clickBirthInput()
                 .checkingFields();
 
-        Selenide.closeWebDriver();
-        Selenide.clearBrowserCookies();
+
     }
 
     @Test
@@ -122,8 +119,7 @@ public class WebSiteTest extends BaseTestDesktop {
                 .setDate()
                 .checkingFieldsNoErrors();
 
-        Selenide.closeWebDriver();
-        Selenide.clearBrowserCookies();
+
     }
 
     @Test
@@ -138,8 +134,7 @@ public class WebSiteTest extends BaseTestDesktop {
         mapPage.enterPandusFilter()
                 .checkValueFilterInList();
 
-        Selenide.closeWebDriver();
-        Selenide.clearBrowserCookies();
+
     }
 
     @Test
@@ -163,7 +158,5 @@ public class WebSiteTest extends BaseTestDesktop {
                 .clickEnterForm()
                 .checkErrorText();
 
-        Selenide.closeWebDriver();
-        Selenide.clearBrowserCookies();
     }
 }
