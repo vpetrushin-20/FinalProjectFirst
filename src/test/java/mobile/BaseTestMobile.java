@@ -24,7 +24,7 @@ public abstract class BaseTestMobile {
 
         Configuration.browserCapabilities = options;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        System.setProperty("chromeoptions.args", "\"--no-sandbox\",\"--disable-dev-shm-usage\",\"--remote-debugging-port=9222\",\"--headless\"");
+        System.setProperty("chromeoptions.args", "\"--no-sandbox\",\"--disable-dev-shm-usage\",\"--remote-debugging-port=9222\"");
 
     }
 
