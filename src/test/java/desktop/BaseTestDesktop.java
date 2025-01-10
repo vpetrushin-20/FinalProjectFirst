@@ -7,12 +7,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.jupiter.api.BeforeAll;
 
 
 abstract class BaseTestDesktop {
 
-    @Before
-    public  void setUp() {
+    @BeforeAll
+    public  static void setUp() {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
         Configuration.webdriverLogsEnabled = true;

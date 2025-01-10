@@ -1,6 +1,5 @@
 package desktop;
 
-import com.codeborne.selenide.Selenide;
 import io.qameta.allure.*;
 
 import org.junit.jupiter.api.DisplayName;

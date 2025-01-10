@@ -127,9 +127,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M7</version>
                 <configuration>
-                    <parallel>methods</parallel>
-                    <threadCount>4</threadCount>
-                    <forkCount>3</forkCount>
+<!--                    <parallel>methods</parallel>-->
+<!--                    <threadCount>4</threadCount>-->
+<!--                    <forkCount>3</forkCount>-->
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
